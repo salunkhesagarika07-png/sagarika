@@ -1,20 +1,36 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    int n;
-    long long fact = 1;
-
-    cout << "Enter a number: ";
-    cin >> n;
-
-    for(int i = 1; i <= n; i++)
+   class Factorial 
+   {
+    int numerator, denominator;
+public:
+    void getdata()
     {
-        fact = fact * i;
+        cout<<"Enter numerator : ";
+        cin>> numerator;
+        cout<<"Enter denominator: ";
+        cin>> denominator;
     }
-
-    cout << "Factorial = " << fact;
-
+    
+    int fact(int n)
+    {
+        int f= 1;
+        for(int i =1; i<=n;i++)
+        {
+            f=f * i;
+        }
+        return f;
+    }
+    void display()
+    {
+        cout<<"Factorial of numerator = " << fact(numerator) << endl;
+        cout<<"Factorial of denominator =" << fact(denominator)<<endl;
+    }
+   };
+   int main()
+   {
+    Factorial f;
+    f.getdata();
+    f.display();
     return 0;
-}
+   }
