@@ -14,38 +14,33 @@ public:
     {
         cout << "Enter Product Name: ";
         cin >> product_name;
-
-        cout << "Enter Product ID: ";
+        cout << "Enter Product id: ";
         cin >> product_id;
-
         cout << "Enter Quantity: ";
         cin >> quantity;
-
         cout << "Enter Price: ";
         cin >> price;
-    }
+}
 
     void displaydata()
     {
-        cout << "\nProduct Name: " << product_name;
+        cout << "\nProduct Name: "<< product_name;
         cout << "\nProduct ID: " << product_id;
         cout << "\nQuantity: " << quantity;
         cout << "\nPrice: " << price;
-    }
+}
 
     void calculateBill()
     {
         float bill;
-        bill = quantity * price;
-
-        cout << "\nTotal Bill: " << bill;
-    }
+        bill = quantity*price;
+        cout <<"\nTotal Bill:"<< bill;
+ }
 };
 
 int main()
 {
     Product p;
-
     p.getdata();
     p.displaydata();
     p.calculateBill();
